@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "36ec1069-05af-454b-bcf4-7cf72a0528cb",
+		"name": "ZohoCliq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21354594"
+	},
+	"item": [
+		{
+			"name": "Post To User using ZUID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Zoho-oauthtoken 1000.c75cb4235f321a1883dce73243e676f4.fba838cd6c34a59e45dc5af24b1e5e57",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Hello, this is a test message from postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cliq.zoho.in/api/v2/buddies/60022480735/message",
+					"protocol": "https",
+					"host": [
+						"cliq",
+						"zoho",
+						"in"
+					],
+					"path": [
+						"api",
+						"v2",
+						"buddies",
+						"60022480735",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post To User using EMAIL_ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER 1000.49da866e595a7534b249b1e9e14ba12a.d89564d1e57561e391eb8e4243bc1ca7",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Hello, this is a test message.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cliq.zoho.com/api/v2/buddies/60021828643/message",
+					"protocol": "https",
+					"host": [
+						"cliq",
+						"zoho",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"buddies",
+						"60021828643",
+						"message"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Hi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Reply To User using EMIAL_ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER 1000.49da866e595a7534b249b1e9e14ba12a.d89564d1e57561e391eb8e4243bc1ca7",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Hello, this is a test message.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cliq.zoho.com/api/v2/buddies/60021828643/message",
+					"protocol": "https",
+					"host": [
+						"cliq",
+						"zoho",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"buddies",
+						"60021828643",
+						"message"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Hi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://accounts.zoho.in/oauth/v2/token?code=1000.eb0f2227c80497b666299988c7f13d9a.b9a5ba33205c7dfb8861aa718dc59654&grant_type=authorization_code&scope=ZohoCliq.Messages.READ,ZohoCliq.Messages.UPDATE,ZohoCliq.Webhooks.CREATE,ZohoCliq.Messages.DELETE,ZohoCliq.Users.READ,ZohoCliq.Users.UPDATE,ZohoCliq.Profile.READ,ZohoCliq.Chats.READ,ZohoCliq.Channels.ALL&client_id=1000.LS4JAI965FA84GD306EAFFENA3EPYZ&client_secret=6a871c3bee4a898ffb600dc53bd1f206d62d3ff860&redirect_uri=https://google.com",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"zoho",
+						"in"
+					],
+					"path": [
+						"oauth",
+						"v2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1000.eb0f2227c80497b666299988c7f13d9a.b9a5ba33205c7dfb8861aa718dc59654"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "scope",
+							"value": "ZohoCliq.Messages.READ,ZohoCliq.Messages.UPDATE,ZohoCliq.Webhooks.CREATE,ZohoCliq.Messages.DELETE,ZohoCliq.Users.READ,ZohoCliq.Users.UPDATE,ZohoCliq.Profile.READ,ZohoCliq.Chats.READ,ZohoCliq.Channels.ALL"
+						},
+						{
+							"key": "client_id",
+							"value": "1000.LS4JAI965FA84GD306EAFFENA3EPYZ"
+						},
+						{
+							"key": "client_secret",
+							"value": "6a871c3bee4a898ffb600dc53bd1f206d62d3ff860"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://google.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch User's Current Status",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL CHAT DETAILS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET MESSAGE DETAILS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Code",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
